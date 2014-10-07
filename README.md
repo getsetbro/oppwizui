@@ -1,4 +1,6 @@
 oppwizui
 ========
 
-opp wiz ui
+##opp wiz ui
+- left nav should be scrollable.
+- everything field needs a disabled state
