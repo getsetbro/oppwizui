@@ -9,7 +9,7 @@
     var svg = d3.select('svg').attr({
         //'xmlns':'http://www.w3.org/2000/svg',
         //'xlink:xlink':'http://www.w3.org/1999/xlink',
-        'viewBox': -(distBetween/2)+' 0 1200 45',
+        'viewBox': -(distBetween/2) + ' 0 1200 45',
         //'preserveAspectRatio':'xMinYMin',
         //'preserveAspectRatio':'xMidYMin',
         //'preserveAspectRatio':'xMaxYMin',
