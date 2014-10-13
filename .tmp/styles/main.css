@@ -1,10 +1,16 @@
+/*var*/
+.ellipsis, .opp-name div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
 /*
  * Base structure
  */
-/* Move down content because we have a fixed navbar that is NNNpx tall */
 body {
-  padding-top: 394px;
-  margin: 0 20px; }
+  padding-top: 374px;
+  margin: 0 20px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .navbar-header {
   height: 64px; }
@@ -13,8 +19,9 @@ h1, h2 {
   font-weight: 300; }
 
 h1 {
-  margin-top: 28px;
-  margin-bottom: 0; }
+  margin-top: 23px;
+  margin-bottom: 0;
+  font-size: 28px; }
 
 /*
  * Global add-ons
@@ -34,12 +41,16 @@ h1 {
 .navbar-fixed-top {
   border: 0; }
 
+.svg-state {
+  height: 142px;
+  overflow: hidden; }
+
 /*
  * Sidebar
  */
 .sidebar {
   position: fixed;
-  top: 394px;
+  top: 374px;
   bottom: 0;
   left: 20px;
   z-index: 1000;
@@ -81,11 +92,36 @@ h1 {
 .req {
   color: #c84e51; }
 
-/*
- * Main content
- */
-.main {
+.top {
+  padding: 0 20px; }
+
+.row1, .row2 {
   padding: 14px 18px 0; }
+
+.row1 {
+  background-color: #eee;
+  height: 65px; }
+
+.row2 {
+  background-color: #bbb;
+  height: 50px; }
+  .row2 label {
+    color: #fff;
+    font-size: 16px; }
+    .row2 label input {
+      vertical-align: 1px; }
+
+.opp-name {
+  max-width: calc(100% - 475px);
+  position: relative; }
+  .opp-name div {
+    font-size: 25px;
+    line-height: 25px; }
+  .opp-name button {
+    position: absolute;
+    top: -7px;
+    right: -40px;
+    font-size: 20px; }
 
 .mainarea {
   margin-left: 273px;

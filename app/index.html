@@ -7,23 +7,29 @@
     <title>oppwizui</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-    <div class="navbar navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-fixed-top">
         <div class="navbar-inverse container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">logo</a>
             </div>
         </div>
-        <div style="padding:0 20px">
+        <div class="top">
             <h1>Opportunity Wizard</h1>
-            <svg></svg>
-            <div style="background-color:#eee;height:65px" class="main clearfix">
-                <div class="pull-left">
-                    <strong>This Opportunity Name</strong>
-                    <br>Dealio ID #123456
+            <div class="svg-state">
+              <svg></svg>
+            </div>
+            <div class="clearfix row1">
+                <div class="pull-left opp-name">
+                    <div contenteditable=true>This Opportunity Name This Opportunity Name This Opportunity Name</div>
+                    <span>Dealio ID #</span><span>123456</span>
+                    <button type="button" class="btn btn-link">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
                 </div>
                 <div class="pull-right form-inline" role="form">
                     <input type="text" class="form-control" placeholder="&lt;Select Transaction Type&gt;" />
@@ -33,20 +39,19 @@
                     <button type="submit" class="btn btn-success">Save</button>
                 </div>
             </div>
-            <div style="background-color:#bbb;height:50px" class="main form-inline">
+            <div class="form-inline row2">
                 <div class="checkbox">
                     <label>
                         <input type="checkbox"/> Show Optional Fields
                     </label>
                 </div>
             </div>
-
         </div>
     </div>
     <div class="container-fluid">
         <div class="row">
             <div class="sidebar">
-                <div class="nav-sidebar">
+                <div class="nav-sidebar" role="navigation">
                     <div class="hdr req active">
                         <span class="glyphicon glyphicon-chevron-right"></span> General</div>
                     <div class="req">Client</div>
