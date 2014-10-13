@@ -106,4 +106,7 @@
             return d;
         });
 
+
+$('[data-toggle="popover"]').popover();
+
 })();
