@@ -1,0 +1,40 @@
+.top{
+  padding:0 20px;
+}
+
+.row1, .row2 {
+  padding: 14px 18px 0;
+}
+.row1{
+  background-color:#eee;
+  height:65px;
+}
+.nocollapse .form-control{
+  display: inline-block;
+  width: auto;
+}
+.row2{
+  background-color:#bbb;
+  height:50px;
+  label{
+    color: #fff;
+    font-size: 16px;
+
+  }
+
+}
+.opp-name{
+  max-width: calc(100% - 475px);
+  position: relative;
+  div{
+    @extend .ellipsis;
+    font-size: 25px;
+    line-height: 25px;
+  }
+  button{
+    position: absolute;
+    top:-7px;
+    right:-40px;
+    font-size: 20px;
+  }
+}

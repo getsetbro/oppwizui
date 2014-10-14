@@ -1,0 +1,38 @@
+.form-control{
+  box-shadow: none;
+}
+
+.input-group .form-control {
+  border-right-color: transparent;
+}
+
+.input-group-addon{
+  padding: 1px 2px;
+  background-color: #fff;
+  .btn-link{
+    margin:0;
+    padding:0 2px;
+  }
+}
+
+.multi-selected {
+  height: auto;
+  div{
+    display: inline-block;
+    background-color: $owBlue;
+    border-radius: 4px;
+    color: #fff;
+    padding: 0 5px;
+    white-space: nowrap;
+    margin: 1px;
+
+    .fa{
+      cursor: pointer;
+
+      &:hover{
+        color: black;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,25 @@
+.navbar-fixed-top {
+    min-width: $siteMinWidth;
+}
+.navbar-header {
+    height: 64px;
+}
+
+/*
+ * Global add-ons
+ */
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.navbar{
+    background-color: #fff;
+    margin-bottom: 0
+}
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}

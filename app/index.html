@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en-US">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>oppwizui</title>
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin">
     <link rel="stylesheet" href="styles/main.css">
@@ -28,23 +28,24 @@
                     <div contenteditable=true>This Opportunity Name This Opportunity Name This Opportunity Name</div>
                     <span>Dealio ID #</span><span>123456</span>
                     <button type="button" class="btn-link">
-                      <span class="glyphicon glyphicon-pencil"></span>
+                      <span class="fa fa-pencil"></span>
                     </button>
                 </div>
-                <div class="pull-right form-inline" role="form">
+                <div class="pull-right form-inline nocollapse" role="form">
                     <input type="text" class="form-control" placeholder="&lt;Select Transaction Type&gt;" />
                     <select class="form-control">
                         <option value="">&lt;Select Status&gt;</option>
                     </select>
-                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="submit" class="btn btn-success">
+                      <span class="fa fa-check-circle-o"></span>
+                      Save
+                    </button>
                 </div>
             </div>
-            <div class="form-inline row2">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"/> Show Optional Fields
-                    </label>
-                </div>
+            <div class="row2">
+                <label class="checkbox-inline">
+                  <input type="checkbox"> Show Optional Fields
+                </label>
             </div>
         </div>
     </div>
@@ -53,7 +54,8 @@
             <div class="sidebar">
                 <div class="nav-sidebar" role="navigation">
                     <div class="hdr req active">
-                        <span class="glyphicon glyphicon-chevron-right"></span> General</div>
+                      <span class="fa fa-angle-right"></span> General
+                    </div>
                     <div class="req">Client</div>
                     <div>Security Level</div>
                     <div class="req">Deal Market</div>
@@ -65,7 +67,8 @@
                 </div>
                 <div class="nav-sidebar">
                     <div class="hdr req">
-                        <span class="glyphicon glyphicon-chevron-right"></span> Properties/ Values</div>
+                    <span class="fa fa-angle-right"></span> Properties/ Values
+                    </div>
                     <div>Nav item</div>
                     <div class="req">Nav item again</div>
                     <div>One more nav</div>
@@ -73,7 +76,8 @@
                 </div>
                 <div class="nav-sidebar">
                     <div class="hdr">
-                        <span class="glyphicon glyphicon-chevron-right"></span> Key Dates</div>
+                    <span class="fa fa-angle-right"></span> Key Dates
+                    </div>
                     <div>Nav item again</div>
                     <div>One more nav</div>
                     <div>Another nav item</div>
@@ -81,7 +85,8 @@
                 </div>
                 <div class="nav-sidebar">
                     <div class="hdr">
-                        <span class="glyphicon glyphicon-chevron-right"></span> Contacts/ Commissions</div>
+                    <span class="fa fa-angle-right"></span> Contacts/ Commissions
+                    </div>
                     <div>Nav item again</div>
                     <div>One more nav</div>
                     <div>Another nav item</div>
@@ -94,111 +99,87 @@
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                  Collapsible Group Item #1
+                                  <span class="fa fa-angle-down"></span>
+                                  General
                                 </a>
                             </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in">
                             <div class="panel-body">
                               <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <div class="form-group req">
                                       <label>Label</label>
                                       <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        <span class="fa fa-question-circle"></span>
                                       </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter Text">
+                                        <div class="input-group-addon">
+                                          <button type="button" class="btn-link" data-toggle="modal" data-target="#myModal">
+                                            <span class="fa fa-search"></span>
+                                          </button>
+                                          <button type="button" class="btn-link" data-toggle="modal" data-target="#myModal">
+                                            <span class="fa fa-plus-circle"></span>
+                                          </button>
+                                          <button type="button" class="btn-link">
+                                            <span class="fa fa-minus-circle"></span>
+                                          </button>
+                                        </div>
+                                      </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="form-group">
-                                      <label>Label</label>
-                                      <input type="text" class="form-control" placeholder="Enter text">
+                                      <label>&nbsp;</label>
+                                      <button type="button" class="form-control bttn">
+                                        <span class="fa fa-envelope"></span>
+                                        Request New Client
+                                      </button>
                                     </div>
                                 </div>
                               </div>
                               <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="form-group req">
                                       <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Lorem">
+                                        <span class="fa fa-question-circle"></span>
                                       </button>
                                       <input type="text" class="form-control" placeholder="Enter text">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="form-group">
                                       <label>Label</label>
                                       <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Label</label>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
                                     </div>
                                 </div>
                               </div>
                               <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <div class="form-group req">
                                       <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Lorem">
+                                        <span class="fa fa-question-circle"></span>
                                       </button>
                                       <input type="text" class="form-control" placeholder="Enter text">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="form-group">
                                       <label>Label</label>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label>Label</label>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label>Label</label>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label>Label</label>
-                                      <input type="text" class="form-control" placeholder="Enter text">
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
                                     </div>
                                 </div>
                               </div>
@@ -206,131 +187,106 @@
                                 <div class="col-md-12">
                                     <div class="form-group req">
                                       <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Lorem">
+                                        <span class="fa fa-question-circle"></span>
                                       </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
+                                      <div class="bttn-group">
+                                        <button type="button" class="bttn">
+                                          <span class="fa fa-plus-circle"></span>
+                                          Add Contact
+                                        </button>
+                                        <button type="button" class="bttn">
+                                          <span class="fa fa-plus-circle"></span>
+                                          Add Team
+                                        </button>
+                                      </div>
+                                      <div class="form-control multi-selected">
+                                        <div>
+                                          Cook, Matthew
+                                          <span class="fa fa-times-circle"></span>
+                                        </div>
+                                      </div>
                                     </div>
                                 </div>
                               </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
+                              <div class="morefeilds">
+                                <p class="hdr">
+                                  <span class="fa fa-angle-down"></span> More fields
+                                </p>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="form-group">
+                                        <label>Label</label>
+                                        <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Lorem">
+                                          <span class="fa fa-question-circle"></span>
+                                        </button>
+                                        <div class="input-group">
+                                          <div class="form-control multi-selected">
+                                            <div>Cook, Matthew <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Matt <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Mathew <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Matthew <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Matt <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Mathew <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Matthew <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Matt <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Mathew <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Matthew <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Matt <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Mathew <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Matthew <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Matt <span class="fa fa-times-circle"></span></div>
+                                            <div>Cook, Mathew <span class="fa fa-times-circle"></span></div>
+                                          </div>
+                                          <div class="input-group-addon">
+                                            <button type="button" class="btn-link">
+                                              <span class="fa fa-plus-circle"></span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label>Label</label>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="form-group">
+                                        <label>Label</label>
+                                        <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Lorem">
+                                          <span class="fa fa-question-circle"></span>
+                                        </button>
+                                        <div class="input-group">
+                                          <div class="form-control multi-selected">
+                                            <div>Cook, Matthew <span class="fa fa-times-circle"></span></div>
+                                          </div>
+                                          <div class="input-group-addon">
+                                            <button type="button" class="btn-link">
+                                              <span class="fa fa-plus-circle"></span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label>Label</label>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label>Label</label>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label>Label</label>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label>Label</label>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
+                                <div class="row">
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label>Label</label>
+                                        <textarea class="form-control"></textarea>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label>Label</label>
+                                        <textarea class="form-control"></textarea>
+                                      </div>
+                                  </div>
                                 </div>
                               </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label>Label</label>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                      <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label>Label</label>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
+                              <div class="panelfooter">
+                                <button type="button" class="btn btn-success">
+                                  Next
+                                  <span class="fa fa-angle-circle-right"></span>
+                                </button>
                               </div>
                             </div>
                         </div>
@@ -338,53 +294,41 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                  Collapsible Group Item #2
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">
+                                  <span class="fa fa-angle-down"></span> Properties/ Values
                                 </a>
                             </h4>
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
                             </div>
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                  Collapsible Group Item #3
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">
+                                  <span class="fa fa-angle-down"></span> Key Dates
                                 </a>
                             </h4>
                         </div>
                         <div id="collapseThree" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
                             </div>
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-                                  Collapsible Group Item #4
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="collapsed">
+                                  <span class="fa fa-angle-down"></span> Contacts/ Commissions
                                 </a>
                             </h4>
                         </div>
                         <div id="collapse4" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
                                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
                             </div>
                         </div>
@@ -393,6 +337,25 @@
             </div>
         </div>
     </div>
+
+<!-- Modal -->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <script src="//code.jquery.com/jquery-latest.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
