@@ -36,7 +36,9 @@ h1, h2 {
 
 .popover {
   max-width: 400px;
-  font-size: 12px; }
+  font-size: 12px;
+  /*popovers should be below the fixed header*/
+  z-index: 1020; }
 
 .form-control {
   box-shadow: none; }
@@ -113,9 +115,7 @@ h1, h2 {
   margin-bottom: 10px; }
 
 .navbar-fixed-top {
-  min-width: 535px;
-  /*to stay above popovers that are scrolled up*/
-  z-index: 1070; }
+  min-width: 535px; }
 
 .navbar-header {
   height: 55px; }
@@ -282,5 +282,4 @@ h1 {
 @media (min-width: 768px) {
   .mainarea {
     margin-left: 273px; } }
-
 /*# sourceMappingURL=main.css.map */

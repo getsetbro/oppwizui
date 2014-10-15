@@ -1,7 +1,5 @@
 .navbar-fixed-top {
     min-width: $siteMinWidth;
-/*to stay above popovers that are scrolled up*/
-  z-index: 1070;
 }
 .navbar-header {
     height: 55px;
