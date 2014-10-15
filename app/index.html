@@ -22,6 +22,10 @@
             <h1>Opportunity Wizard</h1>
             <div class="svg-state">
               <svg></svg>
+              <h2 class="alert alert-success">Deal Closed</h2>
+              <h2 class="alert alert-info">On Hold</h2>
+              <h2 class="alert alert-danger">Deal Lost - Lost to Competitor</h2>
+              <h2 class="alert alert-warning">Deal Dead</h2>
             </div>
             <div class="clearfix row1">
                 <div class="pull-left opp-name">
@@ -118,7 +122,7 @@
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse in">
+                        <div id="collapseOne" class="panel-collapse collapse">
                             <div class="panel-body">
                               <div class="row">
                                 <div class="col-md-8">
@@ -354,7 +358,7 @@
                                       <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Read only field populated when status is closed, indicates when revenues have been posted">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
-                                      <input type="text" class="form-control" readonly="readonly">
+                                      <input type="text" class="form-control" readonly="readonly" placeholder="Accounting Status">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -389,9 +393,266 @@
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseTwo" class="panel-collapse collapse">
+                        <div id="collapseTwo" class="panel-collapse collapse in">
                             <div class="panel-body">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+
+                              <div class="row">
+                                <div class="col-md-4">
+                                  <div class="form-group">
+                                    <label>Property Location Market</label>
+                                    <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Indicates location of the subject property per JLL's region list">
+                                      <span class="fa fa-question-circle"></span>
+                                    </button>
+                                    <select class="form-control">
+                                      <option value="">&lt;Select&gt;</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-group">
+                                    <label>&nbsp;</label>
+                                    <button type="button" class="form-control bttn">
+                                      <span class="fa fa-plus-circle"></span>
+                                      Add Property
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-group">
+                                    <label>Building Name</label>
+                                    <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Proper name of the property">
+                                      <span class="fa fa-question-circle"></span>
+                                    </button>
+                                    <input type="text" class="form-control" readonly="readonly" placeholder="Building Name">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row-abovetable">
+                                <button type="button" class="btn btn-default">asdf</button>
+                              </div>
+                              <div class="table-responsive">
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr><th>Building Name</th><th>Property Address</th><th>City</th><th>State</th><th>Property size</th><th>Property Type</th><th>Owner 1</th><th>Owner 2</th><th>Lender</th></tr>
+                                  </thead>
+                                  <tbody>
+                                  <tr><td>Building Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  <tr><td>Building Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  <tr><td>Building Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  <tr><td>Building Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  <tr><td>Building Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  </tbody>
+                                  <tfoot>
+                                    <tr>
+                                      <td colspan="7">foot</td>
+                                      <td colspan="">foot</td>
+                                      <td colspan="">foot</td>
+                                    </tr>
+                                  </tfoot>
+                                </table>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Property Address</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Address number and street name (123 ABC ST.)">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <input type="text" class="form-control" readonly="readonly" placeholder="Property Address">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>City</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="City where the property is located">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                    <input type="text" class="form-control" readonly="readonly" placeholder="City">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>State</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="State where the property is located">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                    <input type="text" class="form-control" readonly="readonly" placeholder="State">
+                                    </div>
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Property size</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Size of the property">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                    <input type="text" class="form-control" readonly="readonly" placeholder="Property size">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>asdf</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                    <input type="text" class="form-control" readonly="readonly" placeholder="Building Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+
+...
+
+
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>asdf</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>asdf</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>asdf</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>asdf</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>asdf</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>asdf</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>asdf</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>asdf</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>asdf</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>asdf</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>asdf</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>asdf</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                              </div>
+
+
                             </div>
                         </div>
                     </div>

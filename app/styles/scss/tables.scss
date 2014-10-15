@@ -1,0 +1,26 @@
+.row-abovetable {
+background-color: #d5d5d5;
+min-height: 65px;
+padding: 15px 15px 0;
+}
+.table-responsive {
+width: 100%;
+margin-bottom: 15px;
+overflow-x: auto;
+overflow-y: hidden;
+-webkit-overflow-scrolling: touch;
+-ms-overflow-style: -ms-autohiding-scrollbar;
+border: 1px solid #ddd;
+  .table{
+    margin-bottom: 0;
+  }
+}
+.table thead{
+  background-color: $darkGray;
+  color: #fff
+}
+
+.table tfoot{
+  background-color: $darkGreen;
+  color: #fff
+}

@@ -40,6 +40,30 @@ h1, h2 {
   /*popovers should be below the fixed header*/
   z-index: 1020; }
 
+.row-abovetable {
+  background-color: #d5d5d5;
+  min-height: 65px;
+  padding: 15px 15px 0; }
+
+.table-responsive {
+  width: 100%;
+  margin-bottom: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  border: 1px solid #ddd; }
+  .table-responsive .table {
+    margin-bottom: 0; }
+
+.table thead {
+  background-color: #171717;
+  color: #fff; }
+
+.table tfoot {
+  background-color: #259052;
+  color: #fff; }
+
 .form-control {
   box-shadow: none; }
 
@@ -47,11 +71,11 @@ h1, h2 {
   border-right-color: transparent; }
 
 .input-group-addon {
-  padding: 1px 2px;
+  padding: 1px 4px;
   background-color: #fff; }
   .input-group-addon .btn-link {
     margin: 0;
-    padding: 0 2px; }
+    padding: 0 1px; }
 
 .multi-selected {
   height: auto; }
