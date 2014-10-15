@@ -4,12 +4,12 @@
 
     var data = ['Long Term Prospect', 'Short Term Prospect', 'RFP/ Proposal/ BOV', 'Engaged', 'Deal Marketing', 'Under Contract', 'Deal Closed'];
     var progress = 4;
-    var distBetween = (1200 / data.length);
+    var distBetween = (1500 / data.length);
 
     var svg = d3.select('svg').attr({
         //'xmlns':'http://www.w3.org/2000/svg',
         //'xlink:xlink':'http://www.w3.org/1999/xlink',
-        'viewBox': -(distBetween / 2) + ' 0 1200 45',
+        'viewBox': -(distBetween / 2) + ' 25 1500 1',
         //'preserveAspectRatio':'xMinYMin',
         //'preserveAspectRatio':'xMidYMin',
         //'preserveAspectRatio':'xMaxYMin',
@@ -20,7 +20,7 @@
         //'preserveAspectRatio': 'xMinYMax',
         //'preserveAspectRatio':'xMidYMax',
         //'preserveAspectRatio':'xMaxYMax',
-        'height': 142,
+        'height': '100%',
         'width': '100%'
     });
 

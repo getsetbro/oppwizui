@@ -1,18 +1,20 @@
+
 .top{
   padding:0 20px;
 }
-
+h1 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
 .row1, .row2 {
   padding: 14px 18px 0;
 }
 .row1{
-  background-color:#eee;
+  background-color:#DDD;
   height:65px;
 }
-.nocollapse .form-control{
-  display: inline-block;
-  width: auto;
-}
+
 .row2{
   background-color:#bbb;
   height:50px;
