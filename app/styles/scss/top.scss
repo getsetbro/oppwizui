@@ -1,5 +1,5 @@
 
-.top{
+.sitetop{
   padding:0 20px;
 }
 h1 {
@@ -11,12 +11,12 @@ h1 {
   padding: 14px 18px 0;
 }
 .row1{
-  background-color:#DDD;
-  height:65px;
+  background-color:#d5d5d5;
+  min-height:65px;
 }
 
 .row2{
-  background-color:#bbb;
+  background-color:#b5b5b5;
   height:50px;
   label{
     color: #fff;
@@ -27,6 +27,7 @@ h1 {
 }
 .opp-name{
   max-width: calc(100% - 475px);
+  min-width: 200px;
   position: relative;
   div{
     @extend .ellipsis;

@@ -18,7 +18,7 @@
                 <a class="navbar-brand" href="#">logo</a>
             </div>
         </div>
-        <div class="top">
+        <div class="sitetop">
             <h1>Opportunity Wizard</h1>
             <div class="svg-state">
               <svg></svg>
@@ -32,9 +32,18 @@
                     </button>
                 </div>
                 <div class="pull-right form-inline nocollapse" role="form">
-                    <input type="text" class="form-control" placeholder="&lt;Select Transaction Type&gt;" />
                     <select class="form-control">
-                        <option value="">&lt;Select Status&gt;</option>
+                        <option value="0">&lt;Select Transaction Type&gt;</option>
+                    </select>
+                    <select class="form-control" id="statusSelect">
+                        <option value="0">&lt;Select Status&gt;</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
                     </select>
                     <button type="submit" class="btn btn-success">
                       <span class="fa fa-check-circle-o"></span>
@@ -57,40 +66,45 @@
                       <span class="fa fa-angle-right"></span> General
                     </div>
                     <div class="req">Client</div>
+                    <div>Primary Client Type</div>
+                    <div>Primary Client Investor Type</div>
                     <div>Security Level</div>
-                    <div class="req">Deal Market</div>
+                    <div>Deal Market</div>
                     <div>Sourcing Party</div>
-                    <div>Nav item again</div>
-                    <div>One more nav</div>
-                    <div>Another nav item</div>
-                    <div>More navigation</div>
+                    <div>Add Contact</div>
+                    <div>Add Team</div>
+                    <div>Technology Type</div>
+                    <div>Additional Clients</div>
+                    <div>Related Deals</div>
+                    <div>Comments</div>
+                    <div>Scope of Services</div>
+                    <div>Reason</div>
+                    <div>Accounting Status</div>
+                    <div>Validation type</div>
                 </div>
                 <div class="nav-sidebar">
-                    <div class="hdr req">
-                    <span class="fa fa-angle-right"></span> Properties/ Values
+                    <div class="hdr">
+                      <span class="fa fa-angle-right"></span> Properties/ Values
                     </div>
                     <div>Nav item</div>
-                    <div class="req">Nav item again</div>
-                    <div>One more nav</div>
-                    <div class="req">Another nav item</div>
                 </div>
                 <div class="nav-sidebar">
                     <div class="hdr">
-                    <span class="fa fa-angle-right"></span> Key Dates
+                      <span class="fa fa-angle-right"></span> Key Dates
                     </div>
                     <div>Nav item again</div>
-                    <div>One more nav</div>
-                    <div>Another nav item</div>
+                </div>
+                <div class="nav-sidebar">
+                    <div class="hdr">
+                      <span class="fa fa-angle-right"></span> Contacts/ Commissions
+                    </div>
                     <div>More navigation</div>
                 </div>
                 <div class="nav-sidebar">
                     <div class="hdr">
-                    <span class="fa fa-angle-right"></span> Contacts/ Commissions
+                      <span class="fa fa-angle-right"></span> ...
                     </div>
-                    <div>Nav item again</div>
-                    <div>One more nav</div>
-                    <div>Another nav item</div>
-                    <div>More navigation</div>
+                    <div>...</div>
                 </div>
             </div>
             <div class="mainarea">
@@ -109,8 +123,8 @@
                               <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                      <label>Client</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Company that JLL is pursuing or engaged with">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
                                       <div class="input-group">
@@ -132,32 +146,42 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                       <label>&nbsp;</label>
-                                      <button type="button" class="form-control bttn">
+                                      <a href="mailto:a@a.com" class="form-control bttn">
                                         <span class="fa fa-envelope"></span>
                                         Request New Client
-                                      </button>
+                                      </a>
                                     </div>
                                 </div>
                               </div>
                               <div class="row">
                                 <div class="col-md-4">
-                                    <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Lorem">
+                                    <div class="form-group">
+                                      <label>Primary Client Type</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Indicates the category the client company belongs to">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                      <label>Label</label>
-                                      <input type="text" class="form-control" placeholder="Enter text">
+                                      <label>Primary Client Investor Type</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Provides more detail to the category the client company belongs to">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                      <label>Label</label>
+                                      <label>Security Level</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Allows user to control editing/viewing access to certain fields within the opportunity -see CapLink Connect site for more information">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
                                       <select class="form-control">
                                         <option value="">&lt;Select&gt;</option>
                                       </select>
@@ -166,17 +190,27 @@
                               </div>
                               <div class="row">
                                 <div class="col-md-8">
-                                    <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Lorem">
+                                    <div class="form-group">
+                                      <label>Deal Market</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="JLL market that is leading the opportunity">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter Text">
+                                        <div class="input-group-addon">
+                                          <button type="button" class="btn-link" data-toggle="modal" data-target="#myModal">
+                                            <span class="fa fa-search"></span>
+                                          </button>
+                                        </div>
+                                      </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                      <label>Label</label>
+                                      <label>Sourcing Party</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="JLL service line/group that originated the opportunity">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
                                       <select class="form-control">
                                         <option value="">&lt;Select&gt;</option>
                                       </select>
@@ -185,11 +219,13 @@
                               </div>
                               <div class="row">
                                 <div class="col-md-12">
-                                    <div class="form-group req">
-                                      <label>Label</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Lorem">
+                                    <div class="form-group">
+                                      <label>JLL Contacts</label>
+                                      <!--
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Lorem">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
+                                       -->
                                       <div class="bttn-group">
                                         <button type="button" class="bttn">
                                           <span class="fa fa-plus-circle"></span>
@@ -213,11 +249,24 @@
                                 <p class="hdr">
                                   <span class="fa fa-angle-down"></span> More fields
                                 </p>
+                              <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label>Technology Type</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content=" Indicates if a specific tool used to win opportunity">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                              </div>
                                 <div class="row">
                                   <div class="col-md-12">
                                       <div class="form-group">
-                                        <label>Label</label>
-                                        <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Lorem">
+                                        <label>Additional Clients</label>
+                                        <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Field used if Client has other JV partners on this opportunity">
                                           <span class="fa fa-question-circle"></span>
                                         </button>
                                         <div class="input-group">
@@ -250,8 +299,8 @@
                                 <div class="row">
                                   <div class="col-md-12">
                                       <div class="form-group">
-                                        <label>Label</label>
-                                        <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Lorem">
+                                        <label>Related Deals</label>
+                                        <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Used to tie other opportunities to this record">
                                           <span class="fa fa-question-circle"></span>
                                         </button>
                                         <div class="input-group">
@@ -270,17 +319,58 @@
                                 <div class="row">
                                   <div class="col-md-6">
                                       <div class="form-group">
-                                        <label>Label</label>
+                                        <label>Comments</label>
+                                        <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Free form text field - used for deal notes">
+                                          <span class="fa fa-question-circle"></span>
+                                        </button>
                                         <textarea class="form-control"></textarea>
                                       </div>
                                   </div>
                                   <div class="col-md-6">
                                       <div class="form-group">
-                                        <label>Label</label>
+                                        <label>Scope of Services</label>
+                                        <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Only editable when transaction type equals advisory, provides more detail on work being executed by JLL">
+                                          <span class="fa fa-question-circle"></span>
+                                        </button>
                                         <textarea class="form-control"></textarea>
                                       </div>
                                   </div>
                                 </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Reason</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Only used when opportunity status equals lost, explains why the opportunity was lost">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Accounting Status</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Read only field populated when status is closed, indicates when revenues have been posted">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <input type="text" class="form-control" readonly="readonly">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Validation type</label>
+                                      <div>
+                                      <label class="radio-inline">
+                                        <input type="radio" name="validationTypes" value="amount" checked="checked"> Amount
+                                      </label>
+                                      <label class="radio-inline">
+                                        <input type="radio" name="validationTypes" id="inlineRadio3" value="percentage"> Percentage
+                                      </label>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
                               </div>
                               <div class="panelfooter">
                                 <button type="button" class="btn btn-success">
@@ -330,6 +420,20 @@
                         <div id="collapse4" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="collapsed">
+                                  <span class="fa fa-angle-down"></span> ...
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse5" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              <p>...</p>
                             </div>
                         </div>
                     </div>

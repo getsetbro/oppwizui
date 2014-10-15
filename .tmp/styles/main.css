@@ -2,7 +2,8 @@
 body {
   padding-top: 273px;
   margin: 0 20px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-width: 535px; }
 
 h1, h2 {
   font-weight: 300; }
@@ -10,14 +11,32 @@ h1, h2 {
 .ellipsis, .opp-name div {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+  /*
+  position: relative;
+  .btn-help{
+    position: absolute;
+    right:0;
+  }
+  */ }
 
 .fa {
-  font-size: 1.2em; }
+  font-size: 1.7rem; }
+  .btn-link .fa {
+    font-size: 2rem; }
+  .multi-selected .fa {
+    font-size: 1.5rem; }
+  .fa.fa-angle-right, .fa.fa-angle-down {
+    font-size: 2.2rem;
+    vertical-align: -2px; }
 
 .nocollapse .form-control {
   display: inline-block;
   width: auto; }
+
+.popover {
+  max-width: 400px;
+  font-size: 12px; }
 
 .form-control {
   box-shadow: none; }
@@ -42,10 +61,12 @@ h1, h2 {
     padding: 0 5px;
     white-space: nowrap;
     margin: 1px; }
+    .multi-selected div:hover {
+      background-color: #8bb0d8; }
     .multi-selected div .fa {
       cursor: pointer; }
       .multi-selected div .fa:hover {
-        color: black; }
+        color: #444; }
 
 .btn-success {
   background-color: #71c789;
@@ -92,7 +113,9 @@ h1, h2 {
   margin-bottom: 10px; }
 
 .navbar-fixed-top {
-  min-width: 720px; }
+  min-width: 535px;
+  /*to stay above popovers that are scrolled up*/
+  z-index: 1070; }
 
 .navbar-header {
   height: 55px; }
@@ -122,7 +145,7 @@ h1, h2 {
 .svgtext {
   text-align: center; }
 
-.top {
+.sitetop {
   padding: 0 20px; }
 
 h1 {
@@ -134,11 +157,11 @@ h1 {
   padding: 14px 18px 0; }
 
 .row1 {
-  background-color: #DDD;
-  height: 65px; }
+  background-color: #d5d5d5;
+  min-height: 65px; }
 
 .row2 {
-  background-color: #bbb;
+  background-color: #b5b5b5;
   height: 50px; }
   .row2 label {
     color: #fff;
@@ -146,6 +169,7 @@ h1 {
 
 .opp-name {
   max-width: calc(100% - 475px);
+  min-width: 200px;
   position: relative; }
   .opp-name div {
     font-size: 25px;
@@ -198,7 +222,6 @@ h1 {
     display: block; }
 
 .mainarea {
-  margin-left: 273px;
   padding: 20px;
   background-color: #f1f1f1; }
   .mainarea .req label:after {
@@ -248,4 +271,16 @@ h1 {
 
 .panelfooter {
   text-align: right; }
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; }
+
+  body {
+    margin-right: 0;
+    margin-left: 0; } }
+@media (min-width: 768px) {
+  .mainarea {
+    margin-left: 273px; } }
+
 /*# sourceMappingURL=main.css.map */

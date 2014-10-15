@@ -25,12 +25,14 @@
     padding: 0 5px;
     white-space: nowrap;
     margin: 1px;
-
+    &:hover{
+      background-color: lighten($owBlue, 10%);
+    }
     .fa{
       cursor: pointer;
 
       &:hover{
-        color: black;
+        color: #444;
       }
     }
   }
