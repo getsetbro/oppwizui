@@ -99,6 +99,9 @@ h1, h2 {
       .multi-selected div .fa:hover {
         color: #444; }
 
+.datepicker {
+  z-index: 1030 !important; }
+
 .btn {
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1); }
 
@@ -210,12 +213,12 @@ h1 {
   min-width: 200px;
   position: relative; }
   .opp-name div {
-    font-size: 25px;
+    font-size: 21px;
     line-height: 25px; }
   .opp-name button {
     position: absolute;
     top: -7px;
-    right: -40px;
+    right: -35px;
     font-size: 20px; }
 
 /*

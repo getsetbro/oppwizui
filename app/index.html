@@ -132,7 +132,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">
                                   <span class="fa fa-angle-down"></span>
                                   General
                                 </a>
@@ -410,7 +410,7 @@
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseTwo" class="panel-collapse collapse in">
+                        <div id="collapseTwo" class="panel-collapse collapse">
                             <div class="panel-body">
 
                               <div class="row">
@@ -716,7 +716,244 @@
                         </div>
                         <div id="collapse4" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                              <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label>Primary Client Contact</label>
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter Text">
+                                        <div class="input-group-addon">
+                                          <button type="button" class="btn-link" data-toggle="modal" data-target="#myModal">
+                                            <span class="fa fa-search"></span>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label>Bill to Contact name/ATTN</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Contact information for the person that will be sent the JLL invoice">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter Text">
+                                        <div class="input-group-addon">
+                                          <button type="button" class="btn-link" data-toggle="modal" data-target="#myModal">
+                                            <span class="fa fa-search"></span>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                      <label>Commission Notes</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Free form text field - provides more detail on the fee structure">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Add Deal Allocation</label>
+                                      <button type="button" class="form-control bttn">
+                                        <span class="fa fa-plus-circle"></span>
+                                        Add Deal Allocation
+                                      </button>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="table-responsive">
+                                <table class="table table-bordered">
+                                  <thead><tr><th>Fee Percentage</th><th>Total Commission</th><th>Type</th><th>Comments</th><th>Outside Broker</th></tr></thead>
+                                  <tbody><tr>
+                                  <td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter text"></td>
+                                  <td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter text"></td>
+                                  <td class="form-inline"><select class="form-control"><option value="">&lt;Select&gt;</option></select></td>
+                                  <td class="form-inline"><textarea class="form-control" rows="2"></textarea></td>
+                                  <td class="form-inline"><select class="form-control"><option value="">&lt;Select&gt;</option></select></td>
+                                  </tr></tbody>
+                                  <tfoot>
+                                    <tr class="danger"><td colspan="3">foot</td><td colspan="1">foot</td><td colspan="1">foot</td></tr>
+                                  </tfoot>
+                                </table>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Fee Percentage</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                       <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                       <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                       <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                       <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                       <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                       <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                       <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>a</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                       <input type="text" class="form-control" placeholder="Enter text">
+                                    </div>
+                                </div>
+                              </div>
+
+                              <div class="panelfooter">
+                                <button type="button" class="bttn">
+                                  <span class="fa fa-chevron-circle-left"></span>
+                                  Back
+                                </button>
+                                <button type="button" class="btn btn-success">
+                                  Next
+                                  <span class="fa fa-chevron-circle-right"></span>
+                                </button>
+                              </div>
                             </div>
                         </div>
                     </div>
