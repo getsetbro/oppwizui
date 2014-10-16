@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin">
     <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -15,13 +16,27 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inverse container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">logo</a>
+            <svg viewBox="0 0 215 40" class="caplink-logo">
+                <g fill="#BC141A">
+                  <path d="M125.636,2.366h8.148v22.26h14.238v7.14h-22.386V2.366z"></path>
+                  <path d="M151.466,1.105h8.358v5.88h-8.358V1.105z M151.634,9.043h8.022v22.722h-8.022V9.043z"></path>
+                  <path d="M164.485,9.043h8.023v3.192c0.359-0.476,0.76-0.938,1.202-1.386c0.442-0.448,0.94-0.84,1.493-1.176c0.553-0.336,1.162-0.609,1.826-0.819c0.663-0.21,1.396-0.315,2.197-0.315c2.449,0,4.357,0.742,5.723,2.226c1.365,1.484,2.048,3.528,2.048,6.132v14.868h-8.022V19.459c0-1.26-0.29-2.211-0.87-2.856c-0.581-0.644-1.341-0.966-2.28-0.966c-0.968,0-1.762,0.322-2.385,0.966c-0.621,0.644-0.932,1.596-0.932,2.856v12.306h-8.023V9.043z"></path>
+                  <path d="M191.533,1.105h8.021v15.54l6.174-7.602h9.03l-7.896,9.114l8.105,13.608h-8.778l-4.577-7.728l-2.059,2.394v5.334h-8.021V1.105z"></path>
+                </g>
+                <path fill="#BC141A" d="M107.242,14.343l-2.458,2.707l1.776,1.615c0.361,0.328,0.573,0.778,0.597,1.266c0.024,0.487-0.144,0.956-0.474,1.316L96.516,32.443c-0.445,0.488-1.123,0.7-1.769,0.552c-0.306-0.07-0.581-0.214-0.815-0.429l-2.369-2.15c-0.746-0.678-0.803-1.839-0.125-2.584l3.273-3.604c-0.807-1.118-1.314-2.42-1.482-3.807l-4.497,4.952c-2.035,2.238-1.867,5.714,0.371,7.749l2.369,2.152c0.694,0.631,1.542,1.074,2.453,1.284c1.934,0.446,3.964-0.19,5.296-1.657l10.17-11.196c0.984-1.084,1.488-2.487,1.418-3.951c-0.07-1.464-0.706-2.812-1.791-3.798L107.242,14.343z"></path>
+                <path fill="#6D7174" d="M100.071,25.637l-2.368-2.15c-1.085-0.985-1.722-2.334-1.792-3.799c-0.07-1.463,0.433-2.866,1.419-3.952L107.5,4.54c0.985-1.084,2.333-1.72,3.797-1.791c1.464-0.069,2.867,0.434,3.953,1.419l2.369,2.151c1.084,0.985,1.721,2.335,1.791,3.798c0.069,1.464-0.434,2.867-1.42,3.953l-4.492,4.945c-0.204-1.526-0.751-2.94-1.485-3.804l3.271-3.602c0.33-0.361,0.497-0.83,0.472-1.316c-0.023-0.489-0.234-0.938-0.596-1.266l-2.369-2.154c-0.362-0.327-0.83-0.494-1.318-0.471c-0.488,0.022-0.938,0.234-1.266,0.597l-10.168,11.195c-0.329,0.361-0.497,0.829-0.473,1.316c0.024,0.487,0.236,0.938,0.597,1.267l2.368,2.151L100.071,25.637L100.071,25.637z"></path>
+                <g fill="#6D7174">
+                  <path d="M15.162,32.353c-2.1,0-4.074-0.378-5.922-1.134c-1.848-0.756-3.451-1.812-4.809-3.171c-1.358-1.358-2.436-2.968-3.234-4.83C0.399,21.357,0,19.333,0,17.149v-0.084c0-2.127,0.392-4.123,1.176-5.985C1.959,9.219,3.038,7.595,4.41,6.208c1.372-1.386,3.003-2.471,4.893-3.255c1.89-0.784,3.955-1.176,6.195-1.176c1.512,0,2.883,0.147,4.116,0.441c1.232,0.294,2.358,0.714,3.381,1.26c1.022,0.546,1.946,1.197,2.772,1.953c0.826,0.756,1.561,1.582,2.205,2.478l-6.132,4.746c-0.84-1.064-1.764-1.904-2.772-2.52c-1.008-0.616-2.226-0.924-3.654-0.924c-1.036,0-1.981,0.204-2.835,0.609c-0.854,0.406-1.589,0.959-2.205,1.659c-0.616,0.7-1.1,1.526-1.449,2.478C8.574,14.909,8.4,15.918,8.4,16.981v0.084c0,1.092,0.174,2.121,0.525,3.087c0.35,0.966,0.833,1.799,1.449,2.499c0.615,0.7,1.351,1.253,2.205,1.659c0.854,0.406,1.799,0.609,2.835,0.609c0.756,0,1.449-0.084,2.079-0.252c0.63-0.168,1.204-0.413,1.722-0.735c0.518-0.322,1.008-0.7,1.47-1.134c0.462-0.434,0.917-0.917,1.365-1.449l6.132,4.368c-0.7,0.952-1.463,1.834-2.289,2.646c-0.826,0.812-1.764,1.512-2.814,2.1c-1.05,0.588-2.226,1.05-3.528,1.386C18.249,32.185,16.785,32.353,15.162,32.353z"></path>
+                  <path d="M38.135,32.269c-1.092,0-2.1-0.154-3.024-0.462c-0.924-0.308-1.729-0.756-2.415-1.344c-0.686-0.588-1.225-1.316-1.617-2.184c-0.392-0.868-0.588-1.875-0.588-3.024v-0.084c0-1.176,0.217-2.212,0.651-3.108c0.434-0.896,1.035-1.638,1.806-2.226c0.77-0.588,1.701-1.035,2.793-1.344c1.092-0.308,2.31-0.462,3.654-0.462c1.063,0,2.079,0.091,3.045,0.273c0.966,0.183,1.771,0.385,2.415,0.609v-0.378c0-1.176-0.372-2.085-1.113-2.73C43,15.161,41.859,14.84,40.319,14.84c-1.204,0-2.296,0.112-3.276,0.336c-0.98,0.224-1.974,0.532-2.982,0.924l-1.638-5.628c1.288-0.532,2.653-0.959,4.095-1.281c1.441-0.321,3.143-0.483,5.103-0.483c2.043,0,3.772,0.238,5.187,0.714c1.414,0.476,2.568,1.162,3.465,2.058c0.868,0.84,1.491,1.855,1.869,3.045c0.378,1.19,0.567,2.583,0.567,4.179v13.062h-7.896v-2.352c-0.784,0.868-1.715,1.561-2.793,2.078C40.942,32.011,39.647,32.269,38.135,32.269z M40.991,27.271c1.176,0,2.128-0.336,2.856-1.008c0.728-0.672,1.092-1.581,1.092-2.73v-1.05c-0.393-0.168-0.861-0.308-1.407-0.42c-0.546-0.111-1.113-0.168-1.701-0.168c-1.176,0-2.079,0.259-2.709,0.777c-0.63,0.518-0.945,1.197-0.945,2.037v0.084c0,0.784,0.266,1.394,0.798,1.827C39.507,27.055,40.179,27.271,40.991,27.271z"></path>
+                  <path d="M57.204,9.043h8.022v3.024c0.391-0.476,0.81-0.924,1.257-1.344c0.447-0.42,0.943-0.791,1.487-1.113c0.545-0.322,1.159-0.581,1.844-0.777c0.684-0.195,1.445-0.294,2.283-0.294c1.34,0,2.618,0.273,3.833,0.819c1.215,0.546,2.284,1.323,3.205,2.331c0.921,1.008,1.655,2.241,2.2,3.696c0.545,1.456,0.817,3.094,0.817,4.914v0.084c0,1.848-0.272,3.507-0.817,4.977c-0.544,1.47-1.271,2.716-2.179,3.738c-0.908,1.022-1.969,1.806-3.184,2.352c-1.215,0.547-2.493,0.819-3.833,0.819c-0.867,0-1.642-0.091-2.325-0.273c-0.685-0.183-1.306-0.421-1.865-0.715c-0.559-0.294-1.062-0.644-1.508-1.05c-0.447-0.405-0.852-0.818-1.215-1.239v9.492h-8.022V9.043z M69.657,25.592c1.31,0,2.411-0.476,3.303-1.428c0.892-0.952,1.338-2.198,1.338-3.738v-0.084c0-1.512-0.446-2.744-1.338-3.696c-0.892-0.952-1.993-1.428-3.303-1.428c-0.642,0-1.241,0.126-1.798,0.378c-0.558,0.252-1.046,0.609-1.463,1.071c-0.418,0.462-0.746,1.001-0.982,1.617c-0.237,0.616-0.355,1.302-0.355,2.058v0.084c0,0.756,0.118,1.449,0.355,2.079c0.237,0.63,0.564,1.176,0.982,1.638c0.418,0.462,0.906,0.819,1.463,1.071C68.416,25.466,69.015,25.592,69.657,25.592z"></path>
+                </g>
+            </svg>
             </div>
         </div>
         <div class="sitetop">
             <h1>Opportunity Wizard</h1>
             <div class="svg-state">
-              <svg></svg>
+              <svg id="svg"></svg>
               <h2 class="alert alert-success">Deal Closed</h2>
               <h2 class="alert alert-info">On Hold</h2>
               <h2 class="alert alert-danger">Deal Lost - Lost to Competitor</h2>
@@ -40,7 +55,7 @@
                         <option value="0">&lt;Select Transaction Type&gt;</option>
                     </select>
                     <select class="form-control" id="statusSelect">
-                        <option value="0">&lt;Select Status&gt;</option>
+                        <option value="a">&lt;Select Status&gt;</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -48,6 +63,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                         <option value="7">7</option>
+                        <option value="Deal Closed">Deal Closed</option>
                     </select>
                     <button type="submit" class="btn btn-success">
                       <span class="fa fa-check-circle-o"></span>
@@ -159,7 +175,7 @@
                               </div>
                               <div class="row">
                                 <div class="col-md-4">
-                                    <div class="form-group">
+                                    <div class="form-group has-error">
                                       <label>Primary Client Type</label>
                                       <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Indicates the category the client company belongs to">
                                         <span class="fa fa-question-circle"></span>
@@ -253,19 +269,19 @@
                                 <p class="hdr">
                                   <span class="fa fa-angle-down"></span> More fields
                                 </p>
-                              <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label>Technology Type</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content=" Indicates if a specific tool used to win opportunity">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
-                                    </div>
+                                <div class="row">
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label>Technology Type</label>
+                                        <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content=" Indicates if a specific tool used to win opportunity">
+                                          <span class="fa fa-question-circle"></span>
+                                        </button>
+                                        <select class="form-control">
+                                          <option value="">&lt;Select&gt;</option>
+                                        </select>
+                                      </div>
+                                  </div>
                                 </div>
-                              </div>
                                 <div class="row">
                                   <div class="col-md-12">
                                       <div class="form-group">
@@ -276,7 +292,7 @@
                                         <div class="input-group">
                                           <div class="form-control multi-selected">
                                             <div>Cook, Matthew <span class="fa fa-times-circle"></span></div>
-                                            <div>Cook, Matt <span class="fa fa-times-circle"></span></div>
+                                            <div>Project Planning, Megaplex Management, Sep 2013 <span class="fa fa-times-circle"></span></div>
                                             <div>Cook, Mathew <span class="fa fa-times-circle"></span></div>
                                             <div>Cook, Matthew <span class="fa fa-times-circle"></span></div>
                                             <div>Cook, Matt <span class="fa fa-times-circle"></span></div>
@@ -310,6 +326,7 @@
                                         <div class="input-group">
                                           <div class="form-control multi-selected">
                                             <div>Cook, Matthew <span class="fa fa-times-circle"></span></div>
+                                            <div>Project Planning, Megaplex Management, Sep 2013 <span class="fa fa-times-circle"></span></div>
                                           </div>
                                           <div class="input-group-addon">
                                             <button type="button" class="btn-link">
@@ -340,46 +357,46 @@
                                       </div>
                                   </div>
                                 </div>
-                              <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>Reason</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Only used when opportunity status equals lost, explains why the opportunity was lost">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>Accounting Status</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Read only field populated when status is closed, indicates when revenues have been posted">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <input type="text" class="form-control" readonly="readonly" placeholder="Accounting Status">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>Validation type</label>
-                                      <div>
-                                      <label class="radio-inline">
-                                        <input type="radio" name="validationTypes" value="amount" checked="checked"> Amount
-                                      </label>
-                                      <label class="radio-inline">
-                                        <input type="radio" name="validationTypes" id="inlineRadio3" value="percentage"> Percentage
-                                      </label>
+                                <div class="row">
+                                  <div class="col-md-4">
+                                      <div class="form-group">
+                                        <label>Reason</label>
+                                        <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Only used when opportunity status equals lost, explains why the opportunity was lost">
+                                          <span class="fa fa-question-circle"></span>
+                                        </button>
+                                        <select class="form-control">
+                                          <option value="">&lt;Select&gt;</option>
+                                        </select>
                                       </div>
-                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <div class="form-group">
+                                        <label>Accounting Status</label>
+                                        <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Read only field populated when status is closed, indicates when revenues have been posted">
+                                          <span class="fa fa-question-circle"></span>
+                                        </button>
+                                        <input type="text" class="form-control" readonly="readonly" placeholder="Accounting Status">
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <div class="form-group">
+                                        <label>Validation type</label>
+                                        <div>
+                                        <label class="radio-inline">
+                                          <input type="radio" name="validationTypes" value="amount" checked="checked"> Amount
+                                        </label>
+                                        <label class="radio-inline">
+                                          <input type="radio" name="validationTypes" id="inlineRadio3" value="percentage"> Percentage
+                                        </label>
+                                        </div>
+                                      </div>
+                                  </div>
                                 </div>
-                              </div>
                               </div>
                               <div class="panelfooter">
                                 <button type="button" class="btn btn-success">
                                   Next
-                                  <span class="fa fa-angle-circle-right"></span>
+                                  <span class="fa fa-chevron-circle-right"></span>
                                 </button>
                               </div>
                             </div>
@@ -417,241 +434,171 @@
                                     </button>
                                   </div>
                                 </div>
-                                <div class="col-md-4">
-                                  <div class="form-group">
-                                    <label>Building Name</label>
-                                    <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Proper name of the property">
-                                      <span class="fa fa-question-circle"></span>
-                                    </button>
-                                    <input type="text" class="form-control" readonly="readonly" placeholder="Building Name">
-                                  </div>
-                                </div>
+
                               </div>
                               <div class="row-abovetable">
-                                <button type="button" class="btn btn-default">asdf</button>
+                                <button type="button" class="bttn">
+                                  <span class="fa fa-plus-circle"></span>
+                                  Add
+                                </button>
+                                <button type="button" class="bttn">
+                                  <span class="fa fa-plus-circle"></span>
+                                  Add
+                                </button>
+                                <div class="pull-right form-inline">
+                                  <div class="form-group">
+                                    <label>a</label>
+                                    <select class="form-control">
+                                      <option value="">a</option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group req has-error">
+                                    <label>b</label>:
+                                    <select class="form-control">
+                                      <option value="">b</option>
+                                    </select>
+                                  </div>
+                                </div>
                               </div>
                               <div class="table-responsive">
                                 <table class="table table-bordered">
                                   <thead>
-                                    <tr><th>Building Name</th><th>Property Address</th><th>City</th><th>State</th><th>Property size</th><th>Property Type</th><th>Owner 1</th><th>Owner 2</th><th>Lender</th></tr>
+                                    <tr><th>&nbsp;</th><th>Building Name</th><th>Property Address</th><th>City</th><th>State</th><th>Property size</th><th>Property Type</th><th>Owner 1</th>
+                                    <th>Owner 2
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Current owner of the property(partner to owner1)">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+
+                                    </th>
+                                    <th>Lender</th>
+                                    </tr>
                                   </thead>
                                   <tbody>
-                                  <tr><td>Building Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
-                                  <tr><td>Building Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
-                                  <tr><td>Building Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
-                                  <tr><td>Building Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
-                                  <tr><td>Building Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  <tr><td><button type="button" class="close red"><span>&times;</span></button></td><td>Name<a href="mailto:a@a.com" class="pull-right bttn-link"><span class="fa fa-envelope"></span></a></td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  <tr class="warning"><td><button type="button" class="close red"><span>&times;</span></button></td><td>Name<a href="mailto:a@a.com" class="pull-right bttn-link"><span class="fa fa-envelope"></span></a></td><td class="danger">Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  <tr><td><button type="button" class="close red"><span>&times;</span></button></td><td>Name<a href="mailto:a@a.com" class="pull-right bttn-link"><span class="fa fa-envelope"></span></a></td><td class="success">Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  <tr><td><button type="button" class="close red"><span>&times;</span></button></td><td>Name<a href="mailto:a@a.com" class="pull-right bttn-link"><span class="fa fa-envelope"></span></a></td><td class="danger">Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  <tr><td><button type="button" class="close red"><span>&times;</span></button></td>
+                                  <td>
+                                    <button type="button" class="bttn-link" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="info 1<br>info 2" data-html="true">Name</button>
+                                    <a href="mailto:a@a.com" class="pull-right bttn-link"><span class="fa fa-envelope"></span></a>
+                                  </td>
+                                  <td>Property Address</td><td>City</td><td>State</td>
+                                  <td class="form-inline danger has-error"><input type="text" class="form-control input-sm" placeholder="Enter text"></td>
+                                  <td>Property Type</td><td>Owner 1</td>
+                                  <td class="form-inline has-error">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter Text">
+                                        <div class="input-group-addon">
+                                          <button type="button" class="btn-link" data-toggle="modal" data-target="#myModal">
+                                            <span class="fa fa-search"></span>
+                                          </button>
+                                        </div>
+                                      </div>
+                                  </td>
+                                  <td>Lender</td></tr>
                                   </tbody>
                                   <tfoot>
-                                    <tr>
-                                      <td colspan="7">foot</td>
-                                      <td colspan="">foot</td>
-                                      <td colspan="">foot</td>
-                                    </tr>
+                                    <tr class="danger"><td colspan="6">foot</td><td colspan="2">foot</td><td colspan="2">foot</td></tr>
+                                    <tr class="success"><td colspan="6">foot</td><td colspan="2">foot</td><td colspan="2">foot</td></tr>
                                   </tfoot>
                                 </table>
                               </div>
                               <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                      <label>Property Address</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Address number and street name (123 ABC ST.)">
+                                      <label>Low Property Value</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Minimum estimated property value">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
-                                      <input type="text" class="form-control" readonly="readonly" placeholder="Property Address">
+                                      <input type="text" class="form-control" placeholder="Enter text">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                      <label>City</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="City where the property is located">
+                                      <label>High Property value</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Maximum estimated property value">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
-                                    <input type="text" class="form-control" readonly="readonly" placeholder="City">
+                                      <input type="text" class="form-control" placeholder="Enter text">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                      <label>State</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="State where the property is located">
+                                      <label>Loan Amount</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Amount that client is seeking to borrow/current unpaid balance of the notes">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
-                                    <input type="text" class="form-control" readonly="readonly" placeholder="State">
+                                      <input type="text" class="form-control" placeholder="Enter text">
                                     </div>
                                 </div>
                               </div>
-
                               <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                      <label>Property size</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Size of the property">
+                                      <label>Capital Raised</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Total equity the client is seeking to raise">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
-                                    <input type="text" class="form-control" readonly="readonly" placeholder="Property size">
+                                      <input type="text" class="form-control" placeholder="Enter text">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                      <label>asdf</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                      <label>Final Sales Price</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Only applies when opportunity status equals deal closed - final price that the opportunity sold">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
-                                    <input type="text" class="form-control" readonly="readonly" placeholder="Building Name">
+                                      <input type="text" class="form-control" placeholder="Enter text">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
 
-...
-
-
-                                </div>
                               </div>
 
                               <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="form-group">
-                                      <label>asdf</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                      <label>Buyer</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Applies only to property sale, purchaser of property">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter Text">
+                                        <div class="input-group-addon">
+                                          <button type="button" class="btn-link" data-toggle="modal" data-target="#myModal">
+                                            <span class="fa fa-search"></span>
+                                          </button>
+                                        </div>
+                                      </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="form-group">
-                                      <label>asdf</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
+                                      <label>Capital Source</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Applies only to financing and equity raised transactions, lender for the opportunity">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>asdf</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
-                                    </div>
-                                </div>
-                              </div>
-
-                              <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>asdf</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>asdf</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>asdf</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter Text">
+                                        <div class="input-group-addon">
+                                          <button type="button" class="btn-link" data-toggle="modal" data-target="#myModal">
+                                            <span class="fa fa-search"></span>
+                                          </button>
+                                        </div>
+                                      </div>
                                     </div>
                                 </div>
                               </div>
-
-                              <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>asdf</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>asdf</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>asdf</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
-                                    </div>
-                                </div>
+                              <div class="panelfooter">
+                                <button type="button" class="bttn">
+                                  <span class="fa fa-chevron-circle-left"></span>
+                                  Back
+                                </button>
+                                <button type="button" class="btn btn-success">
+                                  Next
+                                  <span class="fa fa-chevron-circle-right"></span>
+                                </button>
                               </div>
-
-                              <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>asdf</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>asdf</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>asdf</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="asdf">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <select class="form-control">
-                                        <option value="">&lt;Select&gt;</option>
-                                      </select>
-                                    </div>
-                                </div>
-                              </div>
-
 
                             </div>
                         </div>
@@ -666,7 +613,96 @@
                         </div>
                         <div id="collapseThree" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Start Date</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Date the team started working on the opportunity">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <input type="text" class="form-control" placeholder="Enter date" data-provide="datepicker">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Pitch Proposal Date</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Applies when transaction type equal RFP/Proposal/BOV and this indicates the pitch date with the client">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                       <input type="text" class="form-control" placeholder="Enter date" data-provide="datepicker">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Listing Expiration Date</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Predetermined date that JLL haves the right to list the property to">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                       <input type="text" class="form-control" placeholder="Enter date" data-provide="datepicker">
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Award Date</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="The date that the client hired  JLL for this opportunity">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <input type="text" class="form-control" placeholder="Enter date" data-provide="datepicker">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Estimated Close Date</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="The target date this opportunity will close">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                       <input type="text" class="form-control" placeholder="Enter date" data-provide="datepicker">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Invoice Date</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="The date that an invoice will be sent to the client for JLL services">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                       <input type="text" class="form-control" placeholder="Enter date" data-provide="datepicker">
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Close Probability</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Percentage likelihood that the deal will close">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <input type="text" class="form-control" placeholder="Enter date">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Actual Close Date</label>
+                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="The date the opportunity did close">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                       <input type="text" class="form-control" placeholder="Enter date" data-provide="datepicker">
+                                    </div>
+                                </div>
+
+                              </div>
+
+                              <div class="panelfooter">
+                                <button type="button" class="bttn">
+                                  <span class="fa fa-chevron-circle-left"></span>
+                                  Back
+                                </button>
+                                <button type="button" class="btn btn-success">
+                                  Next
+                                  <span class="fa fa-chevron-circle-right"></span>
+                                </button>
+                              </div>
                             </div>
                         </div>
                     </div>
@@ -725,7 +761,7 @@
     <script src="//code.jquery.com/jquery-latest.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>

@@ -1,17 +1,25 @@
-
+.btn{
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+}
 .btn-success {
   background-color: $owGreen;
   border-color: $owGreen;
 }
 .btn-primary {
-background-color: $owBlue;
-border-color: $owBlue;
+  background-color: $owBlue;
+  border-color: $owBlue;
 }
-.btn-link {
+.btn-link,.bttn-link {
   color: $owBlue;
 }
-.btn{
-  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+.bttn-link{
+  padding: 0;
+  margin: 0;
+  border: 0 none;
+  background-color: transparent;
+  &:hover{
+    color: darken($owBlue, 20%);
+  };
 }
 .bttn{
   display: inline-block;
@@ -42,8 +50,21 @@ border-color: $owBlue;
   border: 0 none;
   padding:0;
   margin:0;
+
+  .has-error &{
+    color: $errorRed;
+  }
 }
 
 .bttn-group{
   margin-bottom: 10px;
+}
+.close.red{
+  color:$errorRed;
+  filter: alpha(opacity=70);
+  opacity: .7;
+  &:hover{
+    filter: alpha(opacity=100);
+    opacity: 1;
+  };
 }

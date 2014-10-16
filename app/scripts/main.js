@@ -4,16 +4,20 @@
 
     var data = ['Long Term Prospect', 'Short Term Prospect', 'RFP/ Proposal/ BOV', 'Engaged', 'Deal Marketing', 'Under Contract', 'Deal Closed'];
     var progress = 4;
-    var vp = 1700;
+    var vp = 1400;
     var distBetween = (vp / data.length);
 
     function buildSVG(p) {
-        if (p) {
+        if(p){
             progress = p;
-            d3.select('svg').remove();
-            $('.svg-state').append('<svg></svg>');
         }
-        var svg = d3.select('svg').attr({
+        if ( !isNaN(progress) ) {
+            d3.select('#svg').remove();
+            $('.svg-state').prepend('<svg id="svg"></svg>');
+        }else{
+            d3.select('#svg').remove();
+        }
+        var svg = d3.select('.svg-state svg').attr({
             //'xmlns':'http://www.w3.org/2000/svg',
             //'xlink:xlink':'http://www.w3.org/1999/xlink',
             'viewBox': -(distBetween / 2) + ' 25 ' + vp + ' 1',
@@ -54,7 +58,7 @@
                     var color = (progress <= (i + 1)) ? '#6D7174' : '#7EA7D3';
                     return color;
                 },
-                'stroke-width': 5
+                'stroke-width': 4
             });
         //big outer circles
         circles.append('circle')
@@ -103,7 +107,7 @@
         circles.append('foreignObject')
             .attr({
                 width: 100,
-                height: 45,
+                height: 90,
                 class: 'foreignObject',
                 x: function(d, i) {
                     return (distBetween * i) - 50;
