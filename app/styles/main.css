@@ -5,10 +5,10 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   min-width: 535px; }
 
-.nowrap, .ellipsis, .opp-name div {
+.nowrap, .ellipsis, .opp-name div, .nav-sidebar div {
   white-space: nowrap; }
 
-.ellipsis, .opp-name div {
+.ellipsis, .opp-name div, .nav-sidebar div {
   overflow: hidden;
   text-overflow: ellipsis;
   /*
@@ -103,6 +103,13 @@ h1, h2 {
 
 .datepicker {
   z-index: 1030 !important; }
+
+.req .form-control {
+  border-color: #a94442;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+
+.has-error .form-control {
+  background-color: #f2ddde; }
 
 .btn {
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1); }
@@ -214,7 +221,7 @@ h1 {
     font-size: 16px; }
 
 .opp-name {
-  max-width: calc(100% - 475px);
+  max-width: calc(100% - 715px);
   min-width: 200px;
   position: relative; }
   .opp-name div {
@@ -239,7 +246,6 @@ h1 {
   padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  /* Scrollable contents if viewport is shorter than content. */
   border-right: 1px solid #aeafb0;
   border-left: 1px solid #aeafb0;
   width: 273px; }
@@ -250,18 +256,21 @@ h1 {
 .nav-sidebar {
   border-bottom: 1px solid #aeafb0; }
   .nav-sidebar div {
-    padding: 14px 18px;
-    padding-left: 44px;
+    padding: 3px 5px;
+    padding-left: 40px;
     cursor: pointer; }
     .nav-sidebar div:hover {
       background-color: #deebfa; }
   .nav-sidebar .hdr {
     padding-left: 12px; }
+  .nav-sidebar .fa {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
   .nav-sidebar .active {
     background-color: #deebfa; }
     .nav-sidebar .active .fa {
-      -webkit-transform: rotate(90deg);
-      transform: rotate(90deg); }
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg); }
   .nav-sidebar .hdr ~ div {
     display: none; }
   .nav-sidebar .active ~ div {
@@ -328,5 +337,4 @@ h1 {
 @media (min-width: 768px) {
   .mainarea {
     margin-left: 273px; } }
-
 /*# sourceMappingURL=main.css.map */

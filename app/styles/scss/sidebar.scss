@@ -12,8 +12,6 @@
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    /* Scrollable contents if viewport is shorter than content. */
-
     border-right: 1px solid #aeafb0;
     border-left: 1px solid #aeafb0;
     width: 273px;
@@ -27,8 +25,9 @@
   border-bottom: 1px solid #aeafb0;
 
   div {
-    padding: 14px 18px;
-    padding-left: 44px;
+    @extend .ellipsis;
+    padding: 3px 5px;
+    padding-left: 40px;
     cursor: pointer;
     &:hover{
       background-color:#deebfa;
@@ -38,10 +37,13 @@
   .hdr {
     padding-left: 12px;
   }
+  .fa {
+    transform: rotate(-90deg);
+  }
   .active {
     background-color: #deebfa;
     .fa {
-        transform: rotate(90deg);
+        transform: rotate(0deg);
     }
   }
   .hdr ~ div {

@@ -55,6 +55,9 @@
                     <select class="form-control">
                         <option value="0">&lt;Select Transaction Type&gt;</option>
                     </select>
+                    <select class="form-control">
+                        <option value="0">&lt;Select Transaction Sub Type&gt;</option>
+                    </select>
                     <select class="form-control" id="statusSelect">
                         <option value="a">&lt;Select Status&gt;</option>
                         <option value="1">1</option>
@@ -83,15 +86,12 @@
                   </label>
               </div>
                 <div class="nav-sidebar" role="navigation">
-                    <div class="hdr req active">
-                      <span class="fa fa-angle-right"></span> General
-                    </div>
+                    <div class="hdr req active"><span class="fa fa-angle-down"></span> General</div>
                     <div class="req">Client</div>
                     <div>Primary Client Type</div>
                     <div>Primary Client Investor Type</div>
                     <div>Security Level</div>
                     <div>Deal Market</div>
-                    <div>Sourcing Party</div>
                     <div>Add Contact</div>
                     <div>Add Team</div>
                     <div>Technology Type</div>
@@ -104,27 +104,19 @@
                     <div>Validation type</div>
                 </div>
                 <div class="nav-sidebar">
-                    <div class="hdr">
-                      <span class="fa fa-angle-right"></span> Properties/ Values
-                    </div>
+                    <div class="hdr"><span class="fa fa-angle-down"></span> Properties/ Values</div>
                     <div>Nav item</div>
                 </div>
                 <div class="nav-sidebar">
-                    <div class="hdr">
-                      <span class="fa fa-angle-right"></span> Key Dates
-                    </div>
+                    <div class="hdr"><span class="fa fa-angle-down"></span> Key Dates</div>
                     <div>Nav item again</div>
                 </div>
                 <div class="nav-sidebar">
-                    <div class="hdr">
-                      <span class="fa fa-angle-right"></span> Contacts/ Commissions
-                    </div>
+                    <div class="hdr"><span class="fa fa-angle-down"></span> Contacts/ Commissions</div>
                     <div>More navigation</div>
                 </div>
                 <div class="nav-sidebar">
-                    <div class="hdr">
-                      <span class="fa fa-angle-right"></span> ...
-                    </div>
+                    <div class="hdr"><span class="fa fa-angle-down"></span> ...</div>
                     <div>...</div>
                 </div>
             </div>
@@ -143,7 +135,7 @@
                             <div class="panel-body">
                               <div class="row">
                                 <div class="col-md-8">
-                                    <div class="form-group req">
+                                    <div class="form-group req has-error">
                                       <label>Client</label>
                                       <button type="button" class="btn-help" data-popover="" data-content="Company that JLL is pursuing or engaged with">
                                         <span class="fa fa-question-circle"></span>
@@ -176,9 +168,9 @@
                               </div>
                               <div class="row">
                                 <div class="col-md-4">
-                                    <div class="form-group has-error">
+                                    <div class="form-group req">
                                       <label>Primary Client Type</label>
-                                      <button type="button" class="btn-help" data-popover="" data-content="Indicates the category the client company belongs to" data-tooltip="" data-error="Error info is">
+                                      <button type="button" class="btn-help" data-popover="" data-content="Indicates the category the client company belongs to">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
                                       <select class="form-control">
@@ -210,26 +202,10 @@
                                 </div>
                               </div>
                               <div class="row">
-                                <div class="col-md-8">
+                                <div class="col-md-4">
                                     <div class="form-group">
                                       <label>Deal Market</label>
                                       <button type="button" class="btn-help" data-popover="" data-content="JLL market that is leading the opportunity">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Enter Text">
-                                        <div class="input-group-addon">
-                                          <button type="button" class="btn-link" data-toggle="modal" data-target="#myModal">
-                                            <span class="fa fa-search"></span>
-                                          </button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>Sourcing Party</label>
-                                      <button type="button" class="btn-help" data-popover="" data-content="JLL service line/group that originated the opportunity">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
                                       <select class="form-control">
@@ -237,16 +213,12 @@
                                       </select>
                                     </div>
                                 </div>
+
                               </div>
                               <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                       <label>JLL Contacts</label>
-                                      <!--
-                                      <button type="button" class="btn-help" data-popover="" data-content="Lorem">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                       -->
                                       <div class="bttn-group">
                                         <button type="button" class="bttn">
                                           <span class="fa fa-plus-circle"></span>
@@ -270,6 +242,26 @@
                                 <p class="hdr">
                                   <span class="fa fa-angle-down"></span> More fields
                                 </p>
+                                <div class="row">
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label>Comments</label>
+                                        <button type="button" class="btn-help" data-popover="" data-content="Free form text field - used for deal notes">
+                                          <span class="fa fa-question-circle"></span>
+                                        </button>
+                                        <textarea class="form-control"></textarea>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label>Scope of Services</label>
+                                        <button type="button" class="btn-help" data-popover="" data-content="Only editable when transaction type equals advisory, provides more detail on work being executed by JLL">
+                                          <span class="fa fa-question-circle"></span>
+                                        </button>
+                                        <textarea class="form-control"></textarea>
+                                      </div>
+                                  </div>
+                                </div>
                                 <div class="row">
                                   <div class="col-md-6">
                                       <div class="form-group">
@@ -338,26 +330,7 @@
                                       </div>
                                   </div>
                                 </div>
-                                <div class="row">
-                                  <div class="col-md-6">
-                                      <div class="form-group">
-                                        <label>Comments</label>
-                                        <button type="button" class="btn-help" data-popover="" data-content="Free form text field - used for deal notes">
-                                          <span class="fa fa-question-circle"></span>
-                                        </button>
-                                        <textarea class="form-control"></textarea>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                      <div class="form-group">
-                                        <label>Scope of Services</label>
-                                        <button type="button" class="btn-help" data-popover="" data-content="Only editable when transaction type equals advisory, provides more detail on work being executed by JLL">
-                                          <span class="fa fa-question-circle"></span>
-                                        </button>
-                                        <textarea class="form-control"></textarea>
-                                      </div>
-                                  </div>
-                                </div>
+
                                 <div class="row">
                                   <div class="col-md-4">
                                       <div class="form-group">
@@ -414,58 +387,29 @@
                                     </select>
                                   </div>
                                 </div>
-                                <div class="col-md-4">
-                                  <div class="form-group">
-                                    <label>&nbsp;</label>
-                                    <button type="button" class="form-control bttn">
-                                      <span class="fa fa-plus-circle"></span>
-                                      Add Property
-                                    </button>
-                                  </div>
-                                </div>
 
                               </div>
                               <div class="clearfix row-abovetable">
-                                <button type="button" class="bttn">
-                                  <span class="fa fa-plus-circle"></span>
-                                  Add
-                                </button>
-                                <button type="button" class="bttn">
-                                  <span class="fa fa-plus-circle"></span>
-                                  Add
-                                </button>
-                                <div class="pull-right form-inline">
-                                  <div class="form-group">
-                                    <label>a</label>
-                                    <select class="form-control">
-                                      <option value="">a</option>
-                                    </select>
-                                  </div>
-                                  <div class="form-group req has-error">
-                                    <label>b</label>:
-                                    <select class="form-control">
-                                      <option value="">b</option>
-                                    </select>
-                                  </div>
-                                </div>
+                                    <button type="button" class="bttn">
+                                      <span class="fa fa-plus-circle"></span>
+                                      Add Property
+                                    </button>
                               </div>
                               <div class="table-responsive">
                                 <table class="table table-bordered">
                                   <thead>
-                                    <tr><th>Building Name</th><th>Property Address</th><th>City</th><th>State</th><th>Property size</th><th>Property Type</th><th>Owner 1</th>
-                                    <th>Owner 2
-                                      <button type="button" class="btn-help" data-popover="" data-content="Current owner of the property(partner to owner1)">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                    </th>
+                                    <tr>
+                                    <th>&nbsp;</th>
+                                    <th>Building Name</th><th>Property Address</th><th>City</th><th>State</th><th>Property size</th><th>Property Type</th><th>Owner 1</th>
+                                    <th>Owner 2</th>
                                     <th>Lender</th>
                                     </tr>
                                   </thead>
                                   <tbody>
-                                  <tr><td>Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
-                                  <tr><td>Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
-                                  <tr><td>Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
-                                  <tr><td>Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  <tr><td><button type="button" class="close red"><span>&times;</span></button></td><td>Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  <tr><td><button type="button" class="close red"><span>&times;</span></button></td><td>Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  <tr><td><button type="button" class="close red"><span>&times;</span></button></td><td>Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
+                                  <tr><td><button type="button" class="close red"><span>&times;</span></button></td><td>Name</td><td>Property Address</td><td>City</td><td>State</td><td>Property size</td><td>Property Type</td><td>Owner 1</td><td>Owner 2</td><td>Lender</td></tr>
                                   </tbody>
                                 </table>
                               </div>
@@ -725,7 +669,7 @@
                                       <button type="button" class="btn-help" data-popover="" data-content="Free form text field - provides more detail on the fee structure">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
-                                      <textarea class="form-control" rows="1"></textarea>
+                                      <textarea class="form-control" rows="3"></textarea>
                                     </div>
                                 </div>
 
@@ -743,6 +687,7 @@
                                   </div>
                                 </div>
                               </div>
+                              <h4>Deal Allocation</h4>
                               <div class="table-responsive">
                                 <table class="table table-bordered">
                                   <thead><tr>
@@ -752,13 +697,13 @@
                                         <span class="fa fa-question-circle"></span>
                                       </button>
                                   </th>
-                                  <th>Comments
-                                      <button type="button" class="btn-help" data-popover="" data-content="Free form text field - provides more detail on the fee structure">
+                                  <th class="nowrap">Outside Broker
+                                      <button type="button" class="btn-help" data-popover="" data-content="Company that is JLL is working witheiving commission">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
                                   </th>
-                                  <th class="nowrap">Outside Broker
-                                      <button type="button" class="btn-help" data-popover="" data-content="Company that is JLL is working witheiving commission">
+                                  <th>Comments
+                                      <button type="button" class="btn-help" data-popover="" data-content="Free form text field - provides more detail on the fee structure">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
                                   </th>
@@ -768,7 +713,6 @@
                                   <tbody><tr>
                                   <td><button type="button" class="close red"><span>&times;</span></button></td>
                                   <td class="form-inline"><select class="form-control input-sm"><option value="">Jones Lang LaSalle</option></select></td>
-                                  <td class="form-inline"><textarea class="form-control input-sm" rows="1"></textarea></td>
                                   <td>
                                       <div class="input-group">
                                         <select class="form-control input-sm"><option>.</option><option>.</option><option>.</option><option>.</option><option>.</option><option>.</option><option>.</option><option>.</option><option>.</option><option>.</option><option>.</option><option>.</option><option>.</option><option>.</option><option>.</option></select>
@@ -777,6 +721,7 @@
                                         </div>
                                       </div>
                                   </td>
+                                  <td class="form-inline"><textarea class="form-control input-sm" rows="1"></textarea></td>
                                   <td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter %"></td>
                                   <td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter amount"></td>
                                   </tr></tbody>
@@ -789,18 +734,18 @@
                               <div class="alert alert-danger">
                               Commission splits do not equal 100%.<br>Selection is required for Operating Unit in row #2.
                               </div>
-
+                              <h4>JLL Broker Allocation</h4>
                               <div class="clearfix row-abovetable">
                                 <button type="button" class="bttn"><span class="fa fa-plus-circle"></span> Add Contact</button>
                                 <button type="button" class="bttn"><span class="fa fa-plus-circle"></span> Add Team</button>
                                 <button type="button" class="bttn"><span class="fa fa-plus-circle"></span> Add Holdback</button>
-                                <button type="button" class="bttn"><span class="fa fa-plus-circle"></span> Add  Role Assignment</button>
+                                <!--<button type="button" class="bttn"><span class="fa fa-plus-circle"></span> Add  Role Assignment</button>-->
                               </div>
                               <div class="table-responsive">
                                 <table class="table table-bordered">
                                   <thead><tr>
                                   <th>&nbsp;</th>
-                                  <th>Type
+                                  <th>JLL Broker
                                       <button type="button" class="btn-help" data-popover="" data-content="Client Contact">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
@@ -819,13 +764,12 @@
                                   <th>Amount</th>
                                   </tr></thead>
                                   <tbody>
-                                  <tr><td><button type="button" class="close red"><span>&times;</span></button></td><td class="form-inline"><span data-html="true" data-tooltip="Name Name<br>Email Address<br>Phone Number">Cook, Franklin</span> <a href="mailto:a@a.com" class="bttn-link"><span class="fa fa-envelope"></span></a></td><td class="form-inline"><div class="input-group"><input class="form-control input-sm"><div class="input-group-addon"><button type="button" class="btn-sm bttn-link"><span class="fa fa-pencil"></span></button></div></div></td><td class="form-inline"><div class="input-group"><input class="form-control input-sm"><div class="input-group-addon"><button type="button" class="btn-sm bttn-link"><span class="fa fa-pencil"></span></button></div></div></td><td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter %"></td><td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter amount"></td></tr>
-                                  <tr><td><button type="button" class="close red"><span>&times;</span></button></td><td class="form-inline"><span data-html="true" data-tooltip="Name Name<br>Email Address<br>Phone Number">Cook, Franklin</span> <a href="mailto:a@a.com" class="bttn-link"><span class="fa fa-envelope"></span></a></td><td class="form-inline"><div class="input-group"><input class="form-control input-sm"><div class="input-group-addon"><button type="button" class="btn-sm bttn-link"><span class="fa fa-pencil"></span></button></div></div></td><td class="form-inline"><div class="input-group"><input class="form-control input-sm"><div class="input-group-addon"><button type="button" class="btn-sm bttn-link"><span class="fa fa-pencil"></span></button></div></div></td><td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter %"></td><td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter amount"></td></tr>
-                                  <tr><td><button type="button" class="close red"><span>&times;</span></button></td><td class="form-inline"><span data-html="true" data-tooltip="Name Name<br>Email Address<br>Phone Number">Cook, Franklin</span> <a href="mailto:a@a.com" class="bttn-link"><span class="fa fa-envelope"></span></a></td><td class="form-inline"><div class="input-group"><input class="form-control input-sm"><div class="input-group-addon"><button type="button" class="btn-sm bttn-link"><span class="fa fa-pencil"></span></button></div></div></td><td class="form-inline"><div class="input-group"><input class="form-control input-sm"><div class="input-group-addon"><button type="button" class="btn-sm bttn-link"><span class="fa fa-pencil"></span></button></div></div></td><td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter %"></td><td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter amount"></td></tr>
-                                  <tr><td><button type="button" class="close red"><span>&times;</span></button></td><td class="form-inline danger"><span data-html="true" data-tooltip="Name Name<br>Email Address<br>Phone Number" data-error="Contact Address is Required">Cook, Franklin</span> <a href="mailto:a@a.com" class="bttn-link"><span class="fa fa-envelope"></span></a></td><td class="form-inline"><div class="input-group"><input class="form-control input-sm"><div class="input-group-addon"><button type="button" class="btn-sm bttn-link"><span class="fa fa-pencil"></span></button></div></div></td><td class="form-inline"><div class="input-group"><input class="form-control input-sm"><div class="input-group-addon"><button type="button" class="btn-sm bttn-link"><span class="fa fa-pencil"></span></button></div></div></td>
-                                  <td class="form-inline danger has-error"><input type="text" class="form-control input-sm" placeholder="Enter %" data-tooltip="" data-error="JLL Broker Split Amount exceeds JLL Deal Allocation of Total Commission"></td>
-                                  <td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter amount"></td></tr>
-                                  <tr><td><button type="button" class="close red"><span>&times;</span></button></td><td class="form-inline"><span data-html="true" data-tooltip="Name Name<br>Email Address<br>Phone Number">Cook, Franklin</span> <a href="mailto:a@a.com" class="bttn-link"><span class="fa fa-envelope"></span></a></td><td class="form-inline"><div class="input-group"><input class="form-control input-sm"><div class="input-group-addon"><button type="button" class="btn-sm bttn-link"><span class="fa fa-pencil"></span></button></div></div></td><td class="form-inline"><div class="input-group"><input class="form-control input-sm"><div class="input-group-addon"><button type="button" class="btn-sm bttn-link"><span class="fa fa-pencil"></span></button></div></div></td><td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter %"></td><td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter amount"></td></tr>
+                                  <tr>
+                                  <td><button type="button" class="close red"><span>&times;</span></button></td>
+                                  <td class="form-inline"><span data-html="true" data-tooltip="Name Name<br>Email Address<br>Phone Number">Cook, Franklin</span> <a href="mailto:a@a.com" class="bttn-link"><span class="fa fa-envelope"></span></a></td>
+                                  <td class="form-inline"><div class="input-group"><input class="form-control input-sm"><div class="input-group-addon"><button type="button" class="btn-sm bttn-link"><span class="fa fa-search"></span></button></div></div></td>
+                                  <td class="form-inline"><div class="input-group"><input class="form-control input-sm"><div class="input-group-addon"><button type="button" class="btn-sm bttn-link"><span class="fa fa-search"></span></button></div></div></td>
+                                  <td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter %"></td><td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter amount"></td></tr>
                                   </tbody>
                                   <tfoot>
                                     <tr class="danger"><td colspan="4">Please update commission splits to equal 100%</td><td>9%</td><td>$ 1234.12</td></tr>
@@ -840,7 +784,7 @@
                                       <button type="button" class="btn-help" data-popover="" data-content="User that originally entered the opportunity">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
+                                      <input type="text" class="form-control" readonly="readonly" value="Text">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -854,19 +798,17 @@
                                       </select>
                                     </div>
                                 </div>
-                                  <div class="col-md-4">
-                                      <div class="form-group">
-                                        <label>Validation type</label>
-                                        <div>
-                                        <label class="radio-inline">
-                                          <input type="radio" name="validationTypes" value="amount" checked="checked"> Amount
-                                        </label>
-                                        <label class="radio-inline">
-                                          <input type="radio" name="validationTypes" id="inlineRadio3" value="percentage"> Percentage
-                                        </label>
-                                        </div>
-                                      </div>
-                                  </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Sourcing Party</label>
+                                      <button type="button" class="btn-help" data-popover="" data-content="JLL service line/group that originated the opportunity">
+                                        <span class="fa fa-question-circle"></span>
+                                      </button>
+                                      <select class="form-control">
+                                        <option value="">&lt;Select&gt;</option>
+                                      </select>
+                                    </div>
+                                </div>
                               </div>
 
                               <div class="panelfooter">

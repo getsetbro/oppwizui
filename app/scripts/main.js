@@ -55,7 +55,7 @@
                 y1: 0,
                 y2: 0,
                 'stroke': function(d, i) {
-                    var color = (progress <= (i + 1)) ? '#6D7174' : '#7EA7D3';
+                    var color = (progress <= (i + 1)) ? '#ccc' : '#7EA7D3';
                     return color;
                 },
                 'stroke-width': 4
@@ -69,26 +69,26 @@
                 cy: 0,
                 r: 15,
                 fill: function(d, i) {
-                    var color = (progress <= i) ? '#6D7174' : '#7EA7D3';
+                    var color = (progress <= i) ? '#ccc' : '#7EA7D3';
                     return color;
                 }
             });
 
         //smaller inner circles
-        circles.append('circle')
-            .attr({
-                cx: function(d, i) {
-                    return (distBetween * i);
-                },
-                cy: 0,
-                r: 10,
-                fill: function(d, i) {
-                    var color = (progress <= i) ? '#afafb0' : '#D2E2E5';
-                    return color;
-                },
-                stroke: '#fff',
-                'stroke-width': 2
-            });
+        // circles.append('circle')
+        //     .attr({
+        //         cx: function(d, i) {
+        //             return (distBetween * i);
+        //         },
+        //         cy: 0,
+        //         r: 10,
+        //         fill: function(d, i) {
+        //             var color = (progress <= i) ? '#afafb0' : '#D2E2E5';
+        //             return color;
+        //         },
+        //         stroke: '#fff',
+        //         'stroke-width': 2
+        //     });
 
         //black circle
         circles.append('circle')
