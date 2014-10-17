@@ -20,7 +20,7 @@
         var svg = d3.select('.svg-state svg').attr({
             //'xmlns':'http://www.w3.org/2000/svg',
             //'xlink:xlink':'http://www.w3.org/1999/xlink',
-            'viewBox': -(distBetween / 3) + ' 1 ' + vp + ' 1',
+            'viewBox': -(distBetween / 3) + ' -5 ' + vp + ' 1',
             //'preserveAspectRatio':'xMinYMin',
             //'preserveAspectRatio':'xMidYMin',
             //'preserveAspectRatio':'xMaxYMin',
