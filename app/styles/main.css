@@ -60,7 +60,7 @@ h1, h2 {
   color: #fff; }
 .table th {
   font-weight: normal; }
-.table tbody > tr > td {
+.table tbody > tr > td, .table tfoot > tr > td {
   vertical-align: middle; }
 .table tfoot tr.danger td {
   background-color: #a94442;
@@ -258,7 +258,6 @@ h1 {
   .nav-sidebar .active {
     background-color: #deebfa; }
     .nav-sidebar .active .fa {
-      -webkit-transform: rotate(90deg);
       transform: rotate(90deg); }
   .nav-sidebar .hdr ~ div {
     display: none; }
@@ -290,7 +289,6 @@ h1 {
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
   .panel-heading .collapsed .fa {
-    -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg); }
 
 .panel-default > .panel-heading {
