@@ -5,9 +5,11 @@ body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     min-width: $siteMinWidth;
 }
-
+.nowrap{
+  white-space: nowrap;
+}
 .ellipsis {
-    white-space: nowrap;
+  @extend .nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     /*
@@ -18,6 +20,7 @@ body {
     }
     */
 }
+
 h1, h2 {
     font-weight: 300
 }

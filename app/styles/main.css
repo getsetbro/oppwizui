@@ -5,8 +5,10 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   min-width: 535px; }
 
+.nowrap, .ellipsis, .opp-name div {
+  white-space: nowrap; }
+
 .ellipsis, .opp-name div {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   /*
@@ -258,6 +260,7 @@ h1 {
   .nav-sidebar .active {
     background-color: #deebfa; }
     .nav-sidebar .active .fa {
+      -webkit-transform: rotate(90deg);
       transform: rotate(90deg); }
   .nav-sidebar .hdr ~ div {
     display: none; }
@@ -289,6 +292,7 @@ h1 {
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
   .panel-heading .collapsed .fa {
+    -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg); }
 
 .panel-default > .panel-heading {

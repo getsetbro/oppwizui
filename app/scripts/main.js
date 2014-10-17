@@ -8,13 +8,13 @@
     var distBetween = (vp / data.length);
 
     function buildSVG(p) {
-        if(p){
+        if (p) {
             progress = p;
         }
-        if ( !isNaN(progress) ) {
+        if (!isNaN(progress)) {
             d3.select('#svg').remove();
             $('.svg-state').prepend('<svg id="svg"></svg>');
-        }else{
+        } else {
             d3.select('#svg').remove();
         }
         var svg = d3.select('.svg-state svg').attr({
@@ -146,8 +146,7 @@
             //.append('tspan')
             .text(function(d) {
                 return d;
-            })
-        ;
+            });
 
     }
     buildSVG();
@@ -156,6 +155,26 @@
         buildSVG(a.target.value);
     });
 
-    $('[data-toggle=popover]').popover();
+    $('[data-popover]').popover({
+        placement: function(a, b) {
+            var $b = $(b);
+            if ($b.data('tooltip') || $b.data('error')) {
+                return 'right';
+            }
+            return 'top';
+        },
+        container: '.mainarea',
+        trigger: 'focus'
+    });
+    //we get the content for the tooltip with the options of the plugin. It's important that the button has no title attribute
+    $('[data-tooltip]').tooltip({
+        placement: 'top',
+        title: function() {
+            return $(this).data('error') || $(this).data('tooltip');
+        },
+        container: '.mainarea',
+        //placement:'top',
+        trigger: 'hover'
+    });
 
 })();
