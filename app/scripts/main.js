@@ -20,7 +20,7 @@
         var svg = d3.select('.svg-state svg').attr({
             //'xmlns':'http://www.w3.org/2000/svg',
             //'xlink:xlink':'http://www.w3.org/1999/xlink',
-            'viewBox': -(distBetween / 2) + ' 25 ' + vp + ' 1',
+            'viewBox': -(distBetween / 3) + ' 1 ' + vp + ' 1',
             //'preserveAspectRatio':'xMinYMin',
             //'preserveAspectRatio':'xMidYMin',
             //'preserveAspectRatio':'xMaxYMin',
@@ -104,49 +104,50 @@
                 fill: '#464646'
             });
 
-        circles.append('foreignObject')
-            .attr({
-                width: 100,
-                height: 90,
-                class: 'foreignObject',
-                x: function(d, i) {
-                    return (distBetween * i) - 50;
-                },
-                y: 23
-            })
-            .append('xhtml:div')
-            .attr('class', 'svgtext')
-            .html(function(d) {
-                return d;
-            });
-
-
-        // circles.append('text')
+        // circles.append('foreignObject')
         //     .attr({
-        //         'alignment-baseline': 'middle',
-        //         'text-anchor': 'middle',
-        //         // x: function(d, i) {
-        //         //     return distBetween * i;
-        //         // },
+        //         width: 100,
+        //         height: 90,
+        //         class: 'foreignObject',
+        //         x: function(d, i) {
+        //             return (distBetween * i) - 50;
+        //         },
         //         y: 23
-        //     }).each(function(d,i) {
-        //         var n = 0;
-        //         var arr = d.split(' ');
-        //         for (n; n < arr.length; n++) {
-        //           d3.select(this)
-        //             .append('tspan')
-        //             .attr({
-        //                 x: distBetween * i,
-        //                 dy: '15'
-        //             })
-        //             .text(arr[n]);
-        //         }
         //     })
-        //     // .append('tspan')
-        //     // .text(function(d) {
-        //     //     return d;
-        //     // })
-        // ;
+        //     .append('xhtml:div')
+        //     .attr('class', 'svgtext')
+        //     .html(function(d) {
+        //         return d;
+        //     });
+
+
+        circles.append('text')
+            .attr({
+                // 'alignment-baseline': 'middle',
+                // 'text-anchor': 'middle',
+                x: function(d, i) {
+                    return (distBetween * i) + 17;
+                },
+                y: -7
+            })
+            // .each(function(d,i) {
+            //     var n = 0;
+            //     var arr = d.split(' ');
+            //     for (n; n < arr.length; n++) {
+            //       d3.select(this)
+            //         .append('tspan')
+            //         .attr({
+            //             x: distBetween * i,
+            //             dy: '15'
+            //         })
+            //         .text(arr[n]);
+            //     }
+            // })
+            //.append('tspan')
+            .text(function(d) {
+                return d;
+            })
+        ;
 
     }
     buildSVG();

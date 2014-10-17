@@ -15,6 +15,8 @@
 <body>
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inverse container-fluid">
+                        <h1 class="pull-right">Opportunity Wizard</h1>
+
             <div class="navbar-header">
             <svg viewBox="0 0 215 40" class="caplink-logo">
                 <g fill="#BC141A">
@@ -31,10 +33,10 @@
                   <path d="M57.204,9.043h8.022v3.024c0.391-0.476,0.81-0.924,1.257-1.344c0.447-0.42,0.943-0.791,1.487-1.113c0.545-0.322,1.159-0.581,1.844-0.777c0.684-0.195,1.445-0.294,2.283-0.294c1.34,0,2.618,0.273,3.833,0.819c1.215,0.546,2.284,1.323,3.205,2.331c0.921,1.008,1.655,2.241,2.2,3.696c0.545,1.456,0.817,3.094,0.817,4.914v0.084c0,1.848-0.272,3.507-0.817,4.977c-0.544,1.47-1.271,2.716-2.179,3.738c-0.908,1.022-1.969,1.806-3.184,2.352c-1.215,0.547-2.493,0.819-3.833,0.819c-0.867,0-1.642-0.091-2.325-0.273c-0.685-0.183-1.306-0.421-1.865-0.715c-0.559-0.294-1.062-0.644-1.508-1.05c-0.447-0.405-0.852-0.818-1.215-1.239v9.492h-8.022V9.043z M69.657,25.592c1.31,0,2.411-0.476,3.303-1.428c0.892-0.952,1.338-2.198,1.338-3.738v-0.084c0-1.512-0.446-2.744-1.338-3.696c-0.892-0.952-1.993-1.428-3.303-1.428c-0.642,0-1.241,0.126-1.798,0.378c-0.558,0.252-1.046,0.609-1.463,1.071c-0.418,0.462-0.746,1.001-0.982,1.617c-0.237,0.616-0.355,1.302-0.355,2.058v0.084c0,0.756,0.118,1.449,0.355,2.079c0.237,0.63,0.564,1.176,0.982,1.638c0.418,0.462,0.906,0.819,1.463,1.071C68.416,25.466,69.015,25.592,69.657,25.592z"></path>
                 </g>
             </svg>
+
             </div>
         </div>
         <div class="sitetop">
-            <h1>Opportunity Wizard</h1>
             <div class="svg-state">
               <svg id="svg"></svg>
               <h2 class="alert alert-success">Deal Closed</h2>
@@ -748,28 +750,66 @@
                                 </div>
                               </div>
                               <div class="row">
-                                <div class="col-md-8">
+                                <div class="col-md-12">
                                     <div class="form-group">
                                       <label>Commission Notes</label>
                                       <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="Free form text field - provides more detail on the fee structure">
                                         <span class="fa fa-question-circle"></span>
                                       </button>
-                                      <textarea class="form-control" rows="3"></textarea>
+                                      <textarea class="form-control" rows="2"></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>Add Deal Allocation</label>
-                                      <button type="button" class="form-control bttn">
-                                        <span class="fa fa-plus-circle"></span>
-                                        Add Deal Allocation
-                                      </button>
-                                    </div>
+
+                              </div>
+                              <div class="row-abovetable">
+                                <button type="button" class="bttn"><span class="fa fa-plus-circle"></span>Add Deal Allocation</button>
+                                <div class="pull-right form-inline">
+                                  <div class="form-group">
+                                    <label>Fee %</label>:
+                                       <input type="text" class="form-control" placeholder="Enter number">
+                                  </div>
+                                  <div class="form-group">
+                                    <label>Total Commission</label>:
+                                       <input type="text" class="form-control" placeholder="Enter number">
+                                  </div>
                                 </div>
                               </div>
                               <div class="table-responsive">
                                 <table class="table table-bordered">
-                                  <thead><tr><th>Fee Percentage</th><th>Total Commission</th><th>Type</th><th>Comments</th><th>Outside Broker</th></tr></thead>
+                                  <thead><tr><th>Type</th><th>Comments</th><th>Outside Broker</th><th>Split %</th><th>Amount</th></tr></thead>
+                                  <tbody><tr>
+                                  <td class="form-inline"><select class="form-control"><option value="">&lt;Select&gt;</option></select></td>
+                                  <td class="form-inline"><textarea class="form-control" rows="2"></textarea></td>
+                                  <td class="form-inline"><select class="form-control"><option value="">&lt;Select&gt;</option></select></td>
+                                  <td class="form-inline"><input type="text" class="form-control" placeholder="Enter number"></td>
+                                  <td class="form-inline"><input type="text" class="form-control" placeholder="Enter number"></td>
+                                  </tr></tbody>
+                                  <tfoot>
+                                    <tr class="success"><td colspan="3">&nbsp;</td><td>100%</td><td>
+                                   <div class="form-group">
+                                      <div class="input-group">
+                                        <div class="input-group-addon">$</div>
+                                        <input type="text" class="form-control input-sm" placeholder="Enter">
+                                      </div>
+                                    </div>
+                                    </td></tr>
+                                  </tfoot>
+                                </table>
+                              </div>
+
+                              <div class="alert alert-danger">
+                              Commission splits do not equal 100%.<br>Selection is required for Operating Unit in row #2.
+                              </div>
+
+                              <div class="row-abovetable">
+                                <button type="button" class="bttn"><span class="fa fa-plus-circle"></span> Add Contact</button>
+                                <button type="button" class="bttn"><span class="fa fa-plus-circle"></span> Add Team</button>
+                                <button type="button" class="bttn"><span class="fa fa-plus-circle"></span> Add Holdback</button>
+                                <button type="button" class="bttn"><span class="fa fa-plus-circle"></span> Add  Role Assignment</button>
+                              </div>
+                              <div class="table-responsive">
+                                <table class="table table-bordered">
+                                  <thead><tr><th>Type</th><th>Operating Unit</th><th>Market</th><th>Split %</th><th>Amount</th></tr></thead>
                                   <tbody><tr>
                                   <td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter text"></td>
                                   <td class="form-inline"><input type="text" class="form-control input-sm" placeholder="Enter text"></td>
@@ -778,151 +818,11 @@
                                   <td class="form-inline"><select class="form-control"><option value="">&lt;Select&gt;</option></select></td>
                                   </tr></tbody>
                                   <tfoot>
-                                    <tr class="danger"><td colspan="3">foot</td><td colspan="1">foot</td><td colspan="1">foot</td></tr>
+                                    <tr class="danger"><td colspan="3">Please update commission splits to equal 100%</td><td>$ 1234.12</td><td>$ 1234.12</td></tr>
                                   </tfoot>
                                 </table>
                               </div>
 
-                              <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>Fee Percentage</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>a</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                       <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>a</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>a</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                       <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>a</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>a</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                       <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>a</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>a</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                       <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>a</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>a</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                       <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>a</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>a</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                       <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>a</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                      <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                      <label>a</label>
-                                      <button type="button" class="btn-help" data-toggle="popover" data-placement="top" data-trigger="focus" data-container=".mainarea" data-content="a">
-                                        <span class="fa fa-question-circle"></span>
-                                      </button>
-                                       <input type="text" class="form-control" placeholder="Enter text">
-                                    </div>
-                                </div>
-                              </div>
                               <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
